@@ -45,7 +45,7 @@ var beweegAlles = function() {
        spelerX=spelerX + 2
      }
      if (keyIsDown(65)){
-          spelerX=spelerX - 2
+          spelerX=spelerX - 3
      }
      if (keyIsDown(87)){
           spelerY=spelerY - 2
