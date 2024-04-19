@@ -30,6 +30,8 @@ var vijandHealth = 100
 var kogelX = 100
 var kogelY = 100
 
+var bg;
+
 
 
 /* ********************************************* */
@@ -40,19 +42,27 @@ var kogelY = 100
  * Updatet globale variabelen met posities van speler, vijanden en kogels
  */
 var beweegAlles = function() {
+  
   // speler
      if (keyIsDown(68)){
        spelerX=spelerX + 2
      }
-     if (keyIsDown(65)){
+     
+    // Links = key A
+    if (keyIsDown(65) && spelerX > 25) {
           spelerX=spelerX - 3
      }
+  
      if (keyIsDown(87)){
           spelerY=spelerY - 2
      }
+  
      if (keyIsDown(83)){
           spelerY=spelerY + 2
+       
      }
+
+  
   // vijand
        if (keyIsDown(RIGHT_ARROW)){
        vijandX=vijandX + 2
@@ -66,6 +76,7 @@ var beweegAlles = function() {
      if (keyIsDown(DOWN_ARROW)){
           vijandY=vijandY + 2
      }
+  
   // kogel
      if (keyIsDown(32)){
        kogelVliegt = true
@@ -93,8 +104,12 @@ var verwerkBotsing = function() {
  */
 var tekenAlles = function() {
   // achtergrond
-  fill("pink");
-  rect(0, 0, 1280, 720);
+  background(bg);
+
+  
+  //fill("pink");
+  //rect(0, 0, 1280, 720);
+  
   // vijand
   
  fill("white");
@@ -126,6 +141,9 @@ var tekenAlles = function() {
  * de p5 library, zodra het spel geladen is in de browser
  */
 function setup() {
+
+  bg = loadImage('doel.jpg');
+  
   // Maak een canvas (rechthoek) waarin je je speelveld kunt tekenen
   createCanvas(1280, 720);
 
