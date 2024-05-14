@@ -53,7 +53,7 @@ var beweegAlles = function() {
           spelerX=spelerX - 3
      }
   
-     if (keyIsDown(87)){
+     if (keyIsDown(87) && spelerX > 25) {
           spelerY=spelerY - 2
      }
   
