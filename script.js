@@ -25,7 +25,7 @@ var health = 100;  // health van spelerawa
 
 var vijandX = 500
 var vijandY = 600
-var vijandHealth = 100
+var vijandHealth = 100 
 
 var kogelX = 100
 var kogelY = 100
