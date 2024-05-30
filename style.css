@@ -17,3 +17,8 @@ html, body {
    */ 
   margin: 0px;
 }
+
+#gameboard{
+
+  border: 3px solid;
+}
